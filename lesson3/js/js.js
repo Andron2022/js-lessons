@@ -32,10 +32,7 @@ let mainList = {
 function chooseGoods() {
   for (let i = 0; i < 5; i++) {
     let a = prompt("Какой тип товара будем продавать?");
-    if (
-      typeof a === "string" && typeof a != null && a != "" &&
-      a.length < 50
-    ) {
+    if (typeof a === "string" && typeof a != null && a != "" && a.length < 50) {
       console.log("Все верно");
       mainList.shopGoods[i] = a;
     } else {
@@ -49,10 +46,7 @@ chooseGoods();
 function hiringEmployers() {
   for (let i = 0; i < 5; i++) {
     let a = prompt("Нанять сотрудника");
-    if (
-      typeof a === "string" && typeof a != null && a != "" &&
-      a.length < 50
-    ) {
+    if (typeof a === "string" && typeof a != null && a != "" && a.length < 50) {
       mainList.employers[i] = a;
     } else {
       i = i - 1;
@@ -81,16 +75,15 @@ function calculationBudgetDey() {
   return moneyDay;
 }
 
-calculationBudgetDey()
+calculationBudgetDey();
 
 function discountPrice(discont) {
-  if (discount = true) {
+  if ((discount = true)) {
     price = price * 0.8;
   }
 }
 
 discountPrice(true);
 console.log(price);
-
 
 console.log(mainList);
