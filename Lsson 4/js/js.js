@@ -93,10 +93,10 @@ let mainList = {
     mainList.shopItems.push(prompt("Введите ещё один товар", ""));
     mainList.shopItems.sort();
   },
-  alItems: function alItems(){
-    alert("У нас вы можете купить: ")
-    mainList.shopGoods.forEach(item, i, arr){
-      
-    }
-  }
+  alItems: function alItems() {
+    alert("У нас вы можете купить: " + mainList.shopItems.split);
+    // mainList.shopGoods.forEach(item, i, arr){
+
+    // }
+  },
 };
