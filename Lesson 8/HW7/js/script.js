@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Таймер отсчета времени до конца акции.
   // Объявим дату, на которой заканчивается таймер
-  let deadline = "2024-03-14";
+  let deadline = "2024-03-16";
 
   function getTimeRemaining(endtime) {
     let t =
@@ -59,15 +59,21 @@ window.addEventListener("DOMContentLoaded", function () {
     // Обновляет значения таймера в html
     function updateClock() {
       let t = getTimeRemaining(endtime);
-      hours.innerHTML = t.hours;
-      minutes.innerHTML = t.minutes;
-      seconds.innerHTML = t.seconds;
+
+      if (t.total > 0) {
+        hours.innerHTML = t.hours;
+        minutes.innerHTML = t.minutes;
+        seconds.innerHTML = t.seconds;
+      } else {
+        hours.innerHTML = "00";
+        minutes.innerHTML = "00";
+        seconds.innerHTML = "00";
+      }
 
       if (t.total <= 0) {
         clearInterval(timeInterval);
       }
     }
-
     updateClock();
     let timeInterval = setInterval(updateClock, 1000);
   }
